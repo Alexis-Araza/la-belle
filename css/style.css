@@ -86,6 +86,8 @@ h2 {
   font-size: 40px;
   border: solid 2px #FFDA57;
   cursor: pointer;
+  float: right;
+  margin-right: 50px; 
 }
 
 /* Dropdown button on hover & focus */
