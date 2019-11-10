@@ -17,20 +17,26 @@ document.getElementById('openNav').addEventListener("click",function(){
 });
 
 
+// var $grid = ('menu__grid').isotope({
+//   itemSelector: 'list__sort',
+//   layoutMode: 'fitRows',
+//   getSortData: {
+//     name: 'item',
+//     price: 'price',
+//     category: '[data-category]',
+//   }
+// });
 
-var $grid = ('menu__grid').isotope({
-  itemSelector: 'list__sort',
-  layoutMode: 'fitRows',
-  getSortData: {
-    name: 'item',
-    price: 'price',
-    category: '[data-category]',
+// // bind filter button click
+// ('menu__filter').on( 'click', 'button', function() {
+//   var filterValue = ( this ).attr('menu__sort');
+//   // use filterFn if matches value
+//   $grid.isotope({ filter: filterValue });
+// });
+
+
+var m__opt = [
+  {
+    name: "Classic",
   }
-});
-
-// bind filter button click
-('menu__filter').on( 'click', 'button', function() {
-  var filterValue = ( this ).attr('menu__sort');
-  // use filterFn if matches value
-  $grid.isotope({ filter: filterValue });
-});
+];
