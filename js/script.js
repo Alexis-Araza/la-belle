@@ -1,25 +1,36 @@
 console.log ('La Belle Waffles!');
 
-$('.myicon').click(function(){
-  $('nav').toggleClass("active");
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+document.getElementById('closeNav').addEventListener("click",function(){
+  closeNav();
 });
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+document.getElementById('openNav').addEventListener("click",function(){
+  openNav();
+});
 
-function filterFunction() {
-  var ul, li, a, i;
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
+
+
+var $grid = ('menu__grid').isotope({
+  itemSelector: 'list__sort',
+  layoutMode: 'fitRows',
+  getSortData: {
+    name: 'item',
+    price: 'price',
+    category: '[data-category]',
   }
-}
+});
+
+// bind filter button click
+('menu__filter').on( 'click', 'button', function() {
+  var filterValue = ( this ).attr('menu__sort');
+  // use filterFn if matches value
+  $grid.isotope({ filter: filterValue });
+});

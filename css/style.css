@@ -1,22 +1,31 @@
+
+/*mobile [iPhone 6/7/8]*/
+
+@media only screen and (max-width:400px){
+
 * {
-	margin: 40px;
+	margin:10px;
 	padding: 0;
 	background-color: #FFDA57; 
 }
 
+footer {
+	background: none;
+	margin: 0;
+}
 
 .container__main {
 	background-color: white;
 	margin: 0;
-	height: 1500px;
+	height: 100%;
 }
 
 .logo {
 	background-color: white;
-	height: 125px;
+	height: 95px;
 }
 
-header {
+header, div, h2, p {
 	margin: 0;
 	background: none;
 	display: block;
@@ -29,7 +38,7 @@ ul {
 	margin-top: 80px;
 	margin-left: 50px;
 	float:right;
-	background-color: white;
+	background-color: none;
 }
 ul::after{
 	clear : right;
@@ -50,13 +59,10 @@ li a:hover{
 	color: #C13E22;
 }
 
-.myicon{
-	display: none;
-}
-
-
 h2 {
-	margin: 80px 0px 0px 660px;
+	margin-top: 40px;
+	font-size: 30px;
+	text-align: center;
 	background: none;
 	display: inline-block;
 }
@@ -67,7 +73,8 @@ h2 {
 }
 
 .img_menu {
-	height: 775px;
+	height: 140px;
+	margin: 20px;
 }
 
 
@@ -83,15 +90,15 @@ h2 {
   background-color: white;
   color: #C13E22;
   padding: 16px;
-  font-size: 40px;
+  font-size: 20px;
   border: solid 2px #FFDA57;
   cursor: pointer;
   float: right;
-  margin-right: 50px; 
+  margin-right: 25px; 
 }
 
 /* Dropdown button on hover & focus */
-.menu__sort:hover, .menu__filter:hover, .menu__sort:focus, .menu_filter:focus {
+.menu__sort:hover, .menu__filter:hover {
   background-color: #C13E22;
   border: solid 2px #FFDA19;
   color: white;
@@ -106,36 +113,105 @@ h2 {
 
 
 
+.menu__grid,.menu__list{
+	background: none;
+	margin: 0;
+}
 
+.menu__grid {
+  border: 1px solid #333;
+  margin: 20px;
+  margin-top: 80px;
+}
 
+/* clear fix */
+.menu__grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
-/*mobile*/
+/* ---- .element-item ---- */
 
-@media only screen and (max-width:576px){
-	nav{
-		display:none;
-	}
-	ul li{
-	display: block;
+.menu__list {
+  position: relative;
+  float: left;
+  width: 97%;
+  height: 225px;
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid red;
+}
+
+.menu__list > * {
+  margin: 0;
+  padding: 0;
+}
+
+.menu__list .item {
+  position: relative;
+  top: 15px;
+  text-transform: none;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+/*.list__sort {
 	
-	/*margin: 10px;*/
-	}
+}*/
 
-	.myicon{
-			margin-top: 5px;
-			margin-bottom : 20px;
-			float: right;
-			font-size:30px;
-			color: blue;
-			display: block;
-			position: fixed;
-			top: 8px;
-			right: 10px;
-	}
-	.myicon::after{
-		clear : right;
-	}
-	.active{
-		display:block;
-	}
+
+
+
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: -10px;
+  background-color: #FFDA57;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay__content {
+  position: relative;
+  width: 35%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 45px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #C13E22;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: -20px;
+  right: 30px;
+  font-size: 70px;
+}
+
+.menuIcon {
+  font-size:70px;
+  cursor:pointer;
+  float: right;
+  margin-right: 16px;
+  margin-top: -115px;
+  background: none;
+}
+
 }
