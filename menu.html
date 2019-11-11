@@ -52,7 +52,7 @@
 
 
 	<select id="menu__filter" onchange="myFunction()">
-		<option class="button" data-filter="*" value="ALL" selected>ALL</option>
+		<option class="button" data-filter="*" value="ALL" onchange="allMenu()"selected>ALL</option>
 	    <option class="button" data-filter="sweet" value="Sweet">SWEET</option>
 	    <option class="button" data-filter="savoury" value="Savoury">SAVOURY</option>
 	    <option class="button" data-filter="drinks" value="Drinks">DRINKS</option>
@@ -67,7 +67,54 @@
 			<p class="item">Classic</p>
 			<p class="item">Cinnamon Sugar</p>
 			<p class="item">Chocolate Sticks</p>
-			<p class="item">Whittaker's Chocolate Dipped</p>
+
+			<p class="item" type="button" data-toggle="modal" data-target="#myModal">Whittaker's Chocolate Dipped</p>
+				<div class="modal fade" id="myModal" role="dialog">
+			    <div class="modal-dialog">
+    
+			      <!-- Modal content-->
+			      <div class="modal-content">
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal" id="close">&times;</button>
+			          <h4 class="modal-title">Whittaker's Chocolate Dipped</h4>
+			        </div>
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/choco-milk.png" class="m_img">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/choco-dark.png" class="m_img">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/choco-white.png" class="m_img">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+
+			        <div class="modal-body">
+
+			          <p>A La Belle best seller, this Belgian Waffle is half dipped in Whittaker's chocolate and topped with a crushed freeze-dried strawberries, raspberries or hazelnuts.</p>
+						<br>
+					  <p>
+					  	Available with milk, dark and white chocolate versions.
+					  </p>
+					  <br>
+					  <p> {COST: $10} </p>
+
+			        </div>
+			      </div>
+			      
+			    </div>
+			</div>
 		</div>
 		
 		<div class="menu__list" id="legend">
@@ -121,7 +168,6 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
