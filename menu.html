@@ -43,7 +43,7 @@
 		
 		<img src="images/peach-m.jpg" class="img_menu">
 	
-	<select class="menu__sort">
+	<select id="menu__sort">
 		<option class="button" data-filter="*" value="SORT" selected>SORT</option>
 	    <option class="button" data-filter="*" value="L - H ($)">L - H ($)</option>
 	    <option class="button" data-filter="*" value="H - L ($)">H - L ($)</option>
@@ -51,7 +51,7 @@
 	</select>
 
 
-	<select class="menu__filter">
+	<select id="menu__filter" onchange="myFunction()">
 		<option class="button" data-filter="*" value="ALL" selected>ALL</option>
 	    <option class="button" data-filter="sweet" value="Sweet">SWEET</option>
 	    <option class="button" data-filter="savoury" value="Savoury">SAVOURY</option>
@@ -60,46 +60,45 @@
 
 
 
-	<div class="menu__grid">
+	<div id="menu__grid">
 
-
-		<div class="menu__list list__sort">
-			<h2 class="menu__daily" data-category="sweet">LA DAILY</h2>
+		<div class="menu__list" id="daily">
+			<h2 id="menu__title" data-category="sweet">LA DAILY</h2>
 			<p class="item">Classic</p>
 			<p class="item">Cinnamon Sugar</p>
 			<p class="item">Chocolate Sticks</p>
 			<p class="item">Whittaker's Chocolate Dipped</p>
 		</div>
 		
-		<div class="menu__list list__sort">
-			<h2 class="menu__legend" data-category="sweet">LA LEGEND</h2>
+		<div class="menu__list" id="legend">
+			<h2 id="menu__title" data-category="sweet">LA LEGEND</h2>
 			<p class="item">Banana Royale</p>
 			<p class="item">Peach Magnifique</p>
 			<p class="item">Banana Fantastique</p>
 			<p class="item">Kiwi As</p>
 		</div>
 
-		<div class="menu__list list__sort">
-			<h2 class="menu__deluxe" data-category="sweet">LA DELUXE</h2>
+		<div class="menu__list" id="deluxe">
+			<h2 id="menu__title" data-category="sweet">LA DELUXE</h2>
 			<p class="item">Deluxe Totale Belge</p>
 		</div>
 
-		<div class="menu__list list__sort">
-			<h2 class="menu__lunch" data-category="savoury">LA LUNCH</h2>
+		<div class="menu__list" id="lunch">
+			<h2 id="menu__title" data-category="savoury">LA LUNCH</h2>
 			<p class="item">Croque Monsieur</p>
 			<p class="item">Caprese</p>
 		</div>
 		
-		<div class="menu__list list__sort">
-			<h2 class="menu__drinks" data-category="drinks">DRINKS</h2>
+		<div class="menu__list" id="drinks">
+			<h2 id="menu__title" data-category="drinks">DRINKS</h2>
 			<p class="item">Filter Coffee (Single Origin)</p>
 			<p class="item">Home-made Belgian Hot Chocolate</p>
 			<p class="item">Juice</p>
 			<p class="item">Soft Drinks</p>
 		</div>
 
-		<div class="menu__list list__sort">
-			<h2 class="menu__combo" data-category="sweet drinks">COMBO</h2>
+		<div class="menu__list" id="combo">
+			<h2 id="menu__title" data-category="sweet drinks">COMBO</h2>
 			<p class="item">Half dozen Classic Waffles</p>
 			<p class="item">Half dozen Assorted Waffles (up to 3 dipped waffles)</p>
 			<p class="item">Classic Waffle + Filter Coffee</p>
@@ -111,7 +110,7 @@
 
 
 	<footer>
-		<p>© 2019 La Belle Waffle</p>
+		<p> © 2019 La Belle Waffle</p>
 	</footer>
 
 
