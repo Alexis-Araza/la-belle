@@ -142,11 +142,11 @@ h2 {
 .menu__list {
   position: relative;
   float: left;
-  width: 97%;
+  width: 92%;
   height: 225px;
-  margin: 5px;
+  margin: 15px;
   padding: 10px;
-  border: 2px solid red;
+  border: 2px solid grey;
 }
 
 .menu__list > * {
@@ -169,7 +169,6 @@ h2 {
 
 
 .modal {
-  margin-top: 80px;
   border: solid 3px #FFDA19;
 }
 
@@ -179,7 +178,7 @@ h2 {
 
 .close {
   float: right;
-  left: 295px;
+  left: 280px;
   font-size: 60px;
   top: 5px;
   position: absolute;
@@ -196,6 +195,7 @@ h2 {
 
 .m_img{
   width: 310px;
+  display: block;
 }
 
 /* Next & previous buttons */

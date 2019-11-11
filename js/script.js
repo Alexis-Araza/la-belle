@@ -17,6 +17,16 @@ document.getElementById('openNav').addEventListener("click",function(){
 });
 
 
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -31,8 +41,10 @@ function showSlides(n) {
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+	slides[i].style.display = "none";
   }
+  slides[slideIndex-1].style.display = "block";
+}
 
 
 
@@ -75,9 +87,8 @@ function myFunction(){
 document.getElementById("menu__filter").value;
   document.getElementById("menu__grid").innerHTML = " "; //to clear the container
 
-  // for(var i = 0; i < m__opt.length; i++) {
-  // 	if (m__opt[i].category === "sweet") {
-    document.getElementById("menu__grid").innerHTML
+
+	document.getElementById("menu__grid").innerHTML
 	+= '</br><div class="menu__list" id="daily">'
 			+ '<h2 id="menu__daily" data-category="sweet">LA DAILY</h2>'
 			+ '<p class="item">'+ cl +'</p>'
@@ -88,35 +99,35 @@ document.getElementById("menu__filter").value;
 						+ '<div class="modal fade" id="myModal" role="dialog">'
 						+ '<div class="modal-dialog">'
 
-			    		+ '<div class="modal-content">'
-			        + '<div class="modal-header">'
-			        +  '<button type="button" class="close" data-dismiss="modal">&times;</button>'
-			        +  '<h4 class="modal-title">Whittaker\'s Chocolate Dipped</h4>'
-			    	+  '</div>'
+						+ '<div class="modal-content">'
+					+ '<div class="modal-header">'
+					+  '<button type="button" class="close" data-dismiss="modal">&times;</button>'
+					+  '<h4 class="modal-title">Whittaker\'s Chocolate Dipped</h4>'
+					+  '</div>'
 
 
-   +  '<div class="mySlides">'
-    +   '<div class="numbertext">1 / 3</div>'
-    +   '<img src="images/choco-milk.png" class="m_img">'
-   +  '</div>'
+						+  '<div class="mySlides">'
+						+   '<div class="numbertext">1 / 3</div>'
+						+   '<img src="images/choco-milk.png" class="m_img">'
+						+  '</div>'
 
-   +  '<div class="mySlides">'
-     +  '<div class="numbertext">2 / 3</div>'
-    +    '<img src="images/choco-dark.png" class="m_img">'
-   +  '</div>'
+						+  '<div class="mySlides">'
+						+  '<div class="numbertext">2 / 3</div>'
+						+    '<img src="images/choco-dark.png" class="m_img">'
+						+  '</div>'
 
-   +  '<div class="mySlides">'
-    +   '<div class="numbertext">3 / 3</div>'
-    +   '<img src="images/choco-white.png" class="m_img">'
-   +  '</div>'
+						+  '<div class="mySlides">'
+						+   '<div class="numbertext">3 / 3</div>'
+						+   '<img src="images/choco-white.png" class="m_img">'
+						+  '</div>'
 
-    +  '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>'
-    +  '<a class="next" onclick="plusSlides(1)">&#10095;</a>'
+							+  '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>'
+							+  '<a class="next" onclick="plusSlides(1)">&#10095;</a>'
 
 
 
-			    	+  '<div class="modal-body">'
-			        + '<p>A La Belle best seller, this Belgian Waffle is half dipped in Whittaker\'s chocolate and topped with a crushed freeze-dried strawberries, raspberries or hazelnuts.</p>'
+					+  '<div class="modal-body">'
+					+ '<p>A La Belle best seller, this Belgian Waffle is half dipped in Whittaker\'s chocolate and topped with a crushed freeze-dried strawberries, raspberries or hazelnuts.</p>'
 					+ '<br>'
 					+  '<p>'
 					+ 	'Available with milk, dark and white chocolate versions.'
@@ -124,9 +135,9 @@ document.getElementById("menu__filter").value;
 					+  '<br>'
 					+  '<p> {COST: $10} </p>'
 
-			   		+  '</div>'
-			    	+  '</div>'
-			      
+					+  '</div>'
+					+  '</div>'
+				  
 					+ '</div>'
 					+ '</div>'
 		+ '</div>'
@@ -162,6 +173,4 @@ document.getElementById("menu__filter").value;
 			+'<p class="item">'+ chc +'</p>'
 		+'</div>'
 		+'</br>';
-	// 	}
-	// }
 }
